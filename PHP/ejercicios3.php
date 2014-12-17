@@ -1,6 +1,6 @@
 <?php
 	
-//PALINDROMOS--------------------------------------------------------------------------
+//SUPERPALINDROMOS--------------------------------------------------------------------------
 function esPalindromo ($p) //FUNCION ES PALINDROMO
 {	if (strrev($p)==$p)  // SI AL INVERTIR LA CADENA $P ES IGUAL QUE $P
 	{                    //con definir $p aqui es suficiente, aunque no lo vuelva a usar
