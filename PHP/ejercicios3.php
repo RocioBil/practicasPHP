@@ -6,7 +6,7 @@ function esPalindromo ($p) //FUNCION ES PALINDROMO
 	{                    //con definir $p aqui es suficiente, aunque no lo vuelva a usar
 	return true;          // CORRECTO
 	}
-	else {               // SI NO, INCORRECTO
+	else {               // SI NO, es INCORRECTO
 	return false;
 	}
 }
