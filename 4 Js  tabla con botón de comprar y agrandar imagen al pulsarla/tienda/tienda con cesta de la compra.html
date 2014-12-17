@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>tablas con fotos en html</title>
+		<meta charset="UTF-8">
+		
+		
+		<style>
+			h1{color:#000000; text-align: left; font-family: "times new roman";font-size: 90;}		
+			h2{color:#000000; text-align: center-left; font-family: "times new roman";font-size: 30;}
+			thead{text-align:center;}
+			tbody{text-align:center;}
+			div{text-align:center; width:100%;}
+		</style>
+		
+		<script>
+			function cesta(estafoto){
+				var producto = document.createElement("img");
+				producto.src = estafoto;
+				producto.width = "100"
+					producto.onclick = function () { 				
+						x = document.getElementById("div2")
+						x.removeChild(producto);
+					}
+				x = document.getElementById("div2");
+				x.appendChild(producto);
+			}	
+							  			
+		</script>
+
+	</head>
+	
+	<body>	
+		
+		<div><h1>Mi tienda</h1></div>
+		
+			<table border="0px" width="40%" cellspacing="0" cellpadding="2">
+				<thead><td><b>Imagen</b></td>
+					   <td><b>Datos</b></td> 
+				</thead>
+				
+				<tbody>
+				<tr>
+					<td><img onclick="cesta(this.src)" src="imagenes/portatil.png"></img></td>
+					<td><b><a href="http://www.twenga.es/portatiles-3-ghz.html">Portátil-3 GHz-4 GB RAM</a></b><br>
+						Comprar: <strike>2.900€</strike> <b>2.599€</b></td>	
+					
+				</tr>
+				
+				<tr>
+					<td><img onclick="cesta(this.src)" src="imagenes/videocamara.png"></img></td>
+					<td><b><a href="http://www.fnac.es/foto-videocamara/Videocamaras/s854">Videocámara-Alta Definición 1080p-60GB</a></b><br>
+						Comprar: <strike>1.099€</strike> <b>999€</b></td	
+				</tr>
+								
+				<tr><td><img onclick="cesta(this.src)" src="imagenes/tv.png"></img></td>
+					<td><b><a href="http://www.diesl.es/Televisor-EVERLED-46HD">Televisor-46"-Full HD</a></b><br>
+						Comprar: <strike>1.999€</strike> <b>1.799€</b></td>
+				</tr>
+				
+				<tr><td><img onclick="cesta(this.src)" src="imagenes/movil.png"></img></td>
+					<td><b><a href="http://www.samsung.com/es/consumer/mobile-phone/tablets/galaxy-tab/SM-T2110ZWAPHE">Móvil-3G-Wi-Fi-8 GB</a></b><br>
+						Comprar: <strike>399€</strike> <b>349€</b></td>
+				</tr>
+				
+
+				
+				</tbody>
+			</table>
+			<div id="div1"><b>Cesta de la Compra</b></div>
+			<div id="div2"></div>
+	</body>
+				
+</html>

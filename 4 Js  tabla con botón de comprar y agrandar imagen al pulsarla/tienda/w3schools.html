@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    border: 1px solid black;
+    margin: 5px;
+}
+</style>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV").getElementsByTagName("P");
+    document.getElementById("demo").innerHTML = x.length;
+}
+</script>
+
+</head>
+<body>
+
+<div id="myDIV">
+  <p>A p element in div.</p>
+  <p>Another p element in div.</p>
+  <p>A third p element in div.</p>
+</div>
+
+<p>Click the button to find out how many p elements there are inside the div element.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+
+
+</body>
+</html>

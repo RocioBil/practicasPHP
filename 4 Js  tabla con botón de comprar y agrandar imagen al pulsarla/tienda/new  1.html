@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>new 1</title>
+		<meta charset="UTF-8">		
+		<style>
+			h1{color:#000000; text-align: left; font-family: "times new roman";font-size: 90;}		
+			h2{color:#000000; text-align: center-left; font-family: "times new roman";font-size: 30;}
+			thead{text-align:center;}
+			tbody{text-align:center;}
+			div{text-align:center; width:100%;}
+		</style>	
+		<script>
+			function meterCesta(estafoto){	
+			// SI EXISTE producto, (producto.id = estafoto.id + "sel") LIN.32
+				if (document.getElementById(estafoto.id+"sel")) {
+			// busca el text area, transfórmalo en número (ahora mismo es una cadena)				
+			// y súmale 1: le sumo a txt.Las cadenas son caracteres alfanuméricos, no valores 				
+			// o números que se puedan sumar. El ordenador no lo entiende como un número.
+					numero = document.getElementById(estafoto.id+"txt");
+			// 	y súmale 1: le sumo a txt
+					numero.value = parseInt(numero.value) + 1;
+			//--------------------------------------------------------		
+					
+			//--------------------------------------------------------		
+			// SI NO EXISTE	
+				} else {						 
+			// creamos elemento imagen
+					var producto = document.createElement("img");
+			// y configuramos
+					producto.src = estafoto.src;
+					producto.id = estafoto.id + "sel";
+					producto.width = 100;
+			// si no existe creo nuevo elemento	text area					
+					var cantidad = document.createElement("textarea");
+			// y lo configuramos
+					cantidad.value = "1";
+					cantidad.id = estafoto.id + "txt";
+					cantidad.cols = 2;
+					cantidad.rows = 1;
+					
+					x = document.getElementById("divhijo");
+					x.appendChild(producto);
+					x.appendChild(cantidad);
+				}
+				
+			}	
+			
+			//seleccionamos padre("divpadre") y añadimos hijo ("divhijo")						
+			function meterNumero(numero){
+				var cantidad = document.createElement("textarea");
+				cantidad = document.getElementById("textarea");
+				divhijo.appendChild(cantidad);
+			}				
+			function borrarTodo(){
+				hijo = document.getElementById("divhijo");
+				padre = document.getElementById("divpadre");
+				padre.removeChild(hijo);
+				
+				var nuevohijo = document.createElement("div");		
+				nuevohijo.id = "divhijo";
+				padre = document.getElementById("divpadre");
+				padre.appendChild(nuevohijo);
+			}			
+			//----------------------------------------------
+			function sumarTotal(total){
+				x = getElementsByTagName("img.data-precio");
+				x.value = parseInt(x.value);
+				
+			}
+		
+			
+            function descuento(){
+			
+			
+			}		
+			//----------------------------------------------
+			
+   		</script>
+	</head>	
+	<body>			
+		<div><h1>Mi tienda</h1></div>		
+			<table border="0px" width="40%" cellspacing="0" cellpadding="2">
+				<thead>
+						<td><b>Imagen</b></td>
+					    <td><b>Datos</b></td> 
+				</thead>				
+				<tbody>
+					<tr>
+						<td><img id="portatil" data-precio="2599" onclick="meterCesta(this)" "sumarTotal(total)"
+									src="imagenes/portatil.png"></img></td>
+						<td><b><a href="http://www.twenga.es/portatiles-3-ghz.html">
+												 Portátil-3 GHz-4 GB RAM</a></b><br>
+							Comprar: <strike>2.900€</strike> <b>2.599€</b></td>							
+					</tr>					
+					<tr>
+						<td><img id="videocamaras" data-precio="999" onclick="meterCesta(this)" 
+						src="imagenes/videocamara.png"></img></td>
+						<td><b><a href="http://www.fnac.es/foto-videocamara/Videocamaras/s854">
+											 Videocámara-Alta Definición 1080p-60GB</a></b><br>
+							Comprar: <strike>1.099€</strike> <b>999€</b></td	
+					</tr>									
+					<tr><td><img id="tv" data-precio="1799" onclick="meterCesta(this)" src="imagenes/tv.png"></img></td>
+						<td><b><a href="http://www.diesl.es/Televisor-EVERLED-46HD">
+												   Televisor-46"-Full HD</a></b><br>
+							Comprar: <strike>1.999€</strike> <b>1.799€</b></td>
+					</tr>					
+					<tr><td><img id="movil" data-precio="349" onclick="meterCesta(this)" src="imagenes/movil.png"></img></td>
+						<td><b><a href="http://www.samsung.com/es/consumer/mobile-phone/tablets/
+										galaxy-tab/SM-T2110ZWAPHE">Móvil-3G-Wi-Fi-8 GB</a></b><br>
+							Comprar: <strike>399€</strike> <b>349€</b></td>
+					</tr>									
+				</tbody>
+			</table>	
+			
+			<div id="div1"><b>Cesta de la Compra</b>
+			<center><button type="button" onclick="borrarTodo()">Borrar Todo</button></center></div>
+			
+			
+			<div id="divpadre">			
+				<div id="divhijo">
+				</div>				
+			</div>
+			
+			<div id="divDesc">
+			<center><button type="button" onclick="descuento()"><b>Aplicar Descuento</b></button></center></div>
+	</body>				
+</html>

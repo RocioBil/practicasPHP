@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>tablas con fotos en html</title>
+		<meta charset="UTF-8">
+		
+		
+		<style>
+			h1{color:#000000; text-align: left; font-family: "times new roman";font-size: 90;}		
+			h2{color:#000000; text-align: center-left; font-family: "times new roman";font-size: 30;}
+			thead{text-align:center;}
+			tbody{text-align:center;}
+			div{text-align:center; width:30%;}
+		</style>
+		
+		<script>
+			function comprar(){
+			alert("Comprar Ahora");
+			}
+			function ponimagen() {
+				x = document.getElementById("seleccion");
+				x.src = "imagenes/portatil.png";
+			}
+			
+			function ponimagen2() {
+				x = document.getElementById("seleccion");
+				x.src = "imagenes/videocamara.png";
+			}
+			
+			function ponimagen3() {
+				x = document.getElementById("seleccion");
+				x.src = "imagenes/tv.png";
+			}
+			
+			function ponimagen4() {
+				x = document.getElementById("seleccion");
+				x.src = "imagenes/movil.png";
+			}
+		</script>
+
+	</head>
+	
+	<body>
+
+	
+	
+		
+		<div><h1>Mi tienda</h1></div>
+		
+			<table border="0px" width="40%" cellspacing="0" cellpadding="2">
+				<thead><td><b>Imagen</b></td>
+					   <td><b>Datos</b></td> 
+					   <td><b>Seleccionado</b></td>
+				</thead>
+				
+				<tbody>
+				<tr>
+					<td><img onclick="ponimagen()" src="imagenes/portatil.png"id="portatil"></img></td>
+					<td><b><a href="http://">Portátil-3 GHz-4 GB RAM</a></b><br>
+						Comprar: <strike>2.900€</strike> <b>2.599€</b>
+					</td>	
+					<td><img src="" id="seleccion"width='150' height='150'></img></td>
+				</tr>
+				
+				<tr>
+					<td><img onclick="ponimagen2()" src="imagenes/videocamara.png"id="videocamara"></img></td>
+					<td><b><a href="http//">Videocámara-Alta Definición 1080p-60GB</a></b><br>
+						Comprar: <strike>1.099€</strike> <b>999€</b></td>
+					<td><center><button type="button" onclick="comprar()">Comprar</button></center></td>
+					
+				</tr>
+								
+				<tr><td><img onclick="ponimagen3()" src="imagenes/tv.png"id="tv"></img></td>
+					<td><b><a href="http//">Televisor-46"-Full HD</a></b><br>
+						Comprar: <strike>1.999€</strike> <b>1.799€</b></td>
+				</tr>
+				
+				<tr><td><img onclick="ponimagen4()" src="imagenes/movil.png"id="movil"></img></td>
+					<td><b><a href="http//">Móvil-3G-Wi-Fi-8 GB</a></b><br>
+						Comprar: <strike>399€</strike> <b>349€</b></td>
+				</tr>
+				
+
+				
+				</tbody>
+			</table>
+	</body>
+				
+</html>

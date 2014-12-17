@@ -1,0 +1,42 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<h1><b>Personal Information</b></h1><br/>
+		
+		<form action="1read_survey.php" method="POST">
+		
+			<b>Name:</b> <input type="text" name="First Name" size=25 width=40 value="First Name">
+				  <input type="text" name="Last Name" size=25 width=40 value="Last Name"><br/><br/>
+			<b>Gender</b><br/>
+				  <input type="radio" name="gender" value="Female"> Female
+				  <input type="radio" name="gender" value="Male"> Male<br/><br/>
+			<b>Age</b><br/>
+				  <select name="age" size=2>
+				  <option value="0">Under 18</option>
+				  <option value="1">18-35</option>
+				  <option value="2" selected>36-55</option>
+				  <option value="3000">Over 55</option>
+				  </select><br/><br/>
+				  
+			<b>Favourites pastime(s)</b><br/>
+				  <input type="checkbox" name="pastime[]" value="Games"> Games
+				  <input type="checkbox" name="pastime[]" value="Sports"> Sports<br/>
+				  <input type="checkbox" name="pastime[]" value="Reading"> Reading
+				  <input type="checkbox" name="pastime[]" value="Music"> Music<br/>
+				  <input type="checkbox" name="pastime[]" value="Computers"> Computers
+				  <input type="checkbox" name="pastime[]" value="TV/Movies"> TV/Movies<br/><br/>
+			<b>Please tell us anything else about yourself:<br/> 
+				  <textarea name="about_yourself" cols=50 rows=10 >Where were you born?
+What was your favourite subject in school?
+How many siblings do you have? Etc.
+				  </textarea><br/><br/> 
+			
+			<input type="reset" value="Reset"> <input type="submit" name="submit" value="Send Info">
+		</form>	  
+			  
+			  
+		
+	</body>
+</html>
